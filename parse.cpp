@@ -53,6 +53,8 @@ shared_ptr<demogData> readCSVLineDemog(std::string theLine) {
     double popOver65 = stod(getField(ss));
     double popUnder18 = stod(getField(ss));
     double popUnder5 = stod(getField(ss));
+    double undergrad = stod(getField(ss));
+    double highschool = stod(getField(ss));
     //TODO for lab01, when you grab more data modify below loop to make sure you grab 
     //the right field
 
@@ -63,7 +65,7 @@ shared_ptr<demogData> readCSVLineDemog(std::string theLine) {
     int totalPop2014 = stoi(getField(ss));
 
     return make_shared<demogData>(name, state, popOver65, popUnder18,
-            popUnder5, totalPop2014);
+            popUnder5, undergrad, highschool, totalPop2014);
 }
 
 
